@@ -1,0 +1,22 @@
+{
+    "name": "min-radish/php-wechat-applet",
+    "description": "PHP对微信小程序API的调用",
+    "keywords": ["PHP", "WeChat", "API", "Applet"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Radish",
+            "email": "1004622952@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.0",
+        "min-radish/php-curl": "~1.2"
+    },
+    "autoload": {
+        "psr-4": {
+          "Radish\\WeChatApplet\\": "src/"
+        }
+    }
+}
