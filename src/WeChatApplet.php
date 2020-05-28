@@ -7,25 +7,24 @@ namespace Radish\WeChatApplet;
 */
 abstract class WeChatApplet
 {
-    protected static $AppID = 'wxb2d69ed0b2152ef6';
-    protected static $AppSecret = 'c9261a72b7ce7382225abbf6c949170c';
+    protected static $appId = 'wxb2d69ed0b2152ef6';
+    protected static $appSecret = 'c9261a72b7ce7382225abbf6c949170c';
 
     use Traits\EasyFunction;
-    use Traits\CustomerService;
-    use Traits\CustomerServiceSession;
+    use Traits\CustomCache;
     use Traits\MessageManage;
     use Traits\AccessToken;
-    use Traits\Material;
-    use Traits\WebAuth;
     use Traits\UserManage;
+    use Traits\Login;
+    use Traits\Subscribe;
 
     public function __construct(array $options = [])
     {
         if (isset($options['appId'])) {
-            self::$AppID = $options['appId'];
+            self::$appId = $options['appId'];
         }
         if (isset($options['appSecret'])) {
-            self::$AppSecret = $options['appSecret'];
+            self::$appSecret = $options['appSecret'];
         }
     }
 }

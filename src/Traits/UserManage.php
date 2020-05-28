@@ -12,7 +12,7 @@ trait UserManage
 {
     /**
      * 获取用户信息
-     * @param  string $openId 微信号在微信公众号唯一标识OPEN_ID
+     * @param  string $openId 微信号在微信唯一标识OPEN_ID
      * @return mixed          用户信息
      */
     public function getUserManageInfo($openId)

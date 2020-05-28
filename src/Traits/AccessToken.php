@@ -2,11 +2,11 @@
 namespace Radish\WeChatApplet\Traits;
 
 use Radish\Network\Curl;
-use Radish\WeChatApplet\Exception\WeChatException;
+use Radish\WeChatApplet\Exception\WeChatAppletException;
 
 /**
 * @author Radish 1004622952@qq.com 2019-03-15
-* 微信公众号accessToken的缓存（根据不同的框架去修改）
+* 微信accessToken的缓存（根据不同的框架去修改）
 */
 
 trait AccessToken
@@ -23,7 +23,7 @@ trait AccessToken
      */
     protected function getTokenApiUrl()
     {
-        return $this->tokenApiUrl . '&appid=' . self::$AppID . '&secret=' . self::$AppSecret;
+        return $this->tokenApiUrl . '&appid=' . self::$appId . '&secret=' . self::$appSecret;
     }
 
     /**
@@ -54,7 +54,7 @@ trait AccessToken
         $array = json_decode($json, true);
         if (!isset($array['access_token'])) {
             $mes = $this->getCodeMap($array['errcode']) ?: '获取access_token失败请重试!';
-            throw new WeChatException($mes, $json);
+            throw new WeChatAppletException($mes, $json);
         }
         
         return $array;

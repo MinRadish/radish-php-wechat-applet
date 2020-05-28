@@ -2,11 +2,10 @@
 namespace Radish\WeChatApplet\Traits;
 
 use Radish\Network\Curl;
-use Radish\WeChatApplet\Exception\WeChatAppletException;
 
 /**
 * @author Radish 1004622952@qq.com 2019-03-20
-* 微信公众号客服消息管理API
+* 微信客服消息管理API
 */
 
 trait MessageManage
