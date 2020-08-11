@@ -17,6 +17,7 @@ abstract class WeChatApplet
     use Traits\UserManage;
     use Traits\Login;
     use Traits\Subscribe;
+    use Traits\Tool;
 
     public function __construct(array $options = [])
     {
